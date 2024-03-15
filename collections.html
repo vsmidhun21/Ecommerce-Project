@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome imports -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Flat Icon Imports -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+</head>
+
+<body>
+
+    <div class="signup">
+        <p>Sign Up and <b>Get 20% OFF</b> for your first order
+            <i id="closeicon" style="margin-left: 5%;cursor: pointer;" class="fa-solid fa-xmark"></i>
+        </p>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar-container">
+        <h1>Nostra</h1>
+        <div class="navbar__menuitems">
+            <a href="index.html">Home</a>
+            <!-- <a href="#newarrival-container">New Arrival</a>
+            <a href="#mostwanted-container">Most Wanted</a> -->
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <i id="menubar" style="font-size: 25px;cursor: pointer;" class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="sidemenu">
+        <div class="sidemenu__maindiv">
+            <div id="sidemenu__close">
+                <i id="sidemenu__closebar" style="cursor: pointer;" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="sidemenu__content">
+                <a href="index.html">Home</a>
+                <!-- <a href="#newarrival-container">New Arrival</a>
+                <a href="#mostwanted-container">Most Wanted</a> -->
+                <a href="collections.html">Collections</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="collections_container">
+
+        <div class="filter_section">
+            <h3 class="filter_section_occasion">Occasion</h3>
+            <div>
+                <input type="checkbox" name="tags" value="summer"> Summer <br>
+                <input type="checkbox" name="tags" value="party"> Party <br>
+                <input type="checkbox" name="tags" value="beach"> Beach
+            </div>
+
+            <h3 class="filter_section_colors"> Colors </h3>
+            <div>
+                <input type="checkbox" name="tags" value="red"> Red <br>
+                <input type="checkbox" name="tags" value="blue"> Blue <br>
+                <input type="checkbox" name="tags" value="white"> White <br>
+                <input type="checkbox" name="tags" value="green"> Green
+            </div>
+
+            <h3 class="filter_section_arrivals"> Arrivals </h3>
+            <div>
+                <input type="checkbox" name="tags" value="new"> New <br>
+                <input type="checkbox" name="tags" value="old"> Old
+            </div>
+        </div>
+
+        <div class="vertical_line">
+        </div>
+
+        <div class="product_section">
+            <form class="navbar_search">
+                <i id="filter_search_icon" class="fa-solid fa-magnifying-glass"></i>
+                <input id="search-input" type="text" placeholder="Search">
+                <i id="filter_close_icon"  class="fa-solid fa-xmark"></i>
+            </form>
+            <div class="products_container">
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f1.jpg" alt="">
+                    <h1>Floral Summer Shirt</h1>
+                    <p>₹220</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f2.jpg" alt="">
+                    <h1>Summer Green</h1>
+                    <p>₹650</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f3.jpg" alt="">
+                    <h1>Party Floral Shirt</h1>
+                    <p>₹249</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f4.jpg" alt="">
+                    <h1>Floral White Shirt</h1>
+                    <p>₹479</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f5.jpg" alt="">
+                    <h1>Beach Shirt</h1>
+                    <p>₹579</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f6.jpg" alt="">
+                    <h1>Shirt Party Red</h1>
+                    <p>₹438</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f7.jpg" alt="">
+                    <h1>Floral Summer Pant</h1>
+                    <p>₹729</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/f8.jpg" alt="">
+                    <h1>Flare Tops</h1>
+                    <p>₹650</p>
+                </div>
+                <div class="products">
+                    <img style="width: 20vw; border-radius:5px;" src="./images/products/n1.jpg" alt="">
+                    <h1>Floral Blue Shirt</h1>
+                    <p>₹820</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- news Letter -->
+    <div class="newsletter">
+        <h1>Join our News Letter</h1>
+        <p>Signup for our email newspaper to get exclusive discounts, updates, and more </p>
+        <input style="width: 80%;padding: 10px;" type="text" /><br>
+        <button>Subscribe <i style="font-size: 2vw;" class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <h1>Nostra</h1>
+        <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for
+            those interest</p>
+        <div class="footer__icon">
+            <i class="icon fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="icon fa-brands fa-twitter" style="color: #ffffff;"></i>
+            <i class="icon fa-brands fa-facebook" style="color: #ffffff;"></i>
+        </div>
+        <p class="subtitle">@ 2023 Nostra.com</p>
+    </div>
+
+    <script src="collections.js"></script>
+
+</body>
+
+</html>
