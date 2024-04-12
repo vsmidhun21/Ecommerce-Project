@@ -1,6 +1,4 @@
 # Python Full Stack - COAPPS
-![python full stack](https://github.com/vsmidhun21/Ecommerce-Project/assets/114806736/229c6a1e-9527-455a-8167-a007b9d8a964)
-
 
 # Project Details
 - PROJECT TITLE      : Retail Ecommerce
