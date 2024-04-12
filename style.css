@@ -164,7 +164,11 @@ body {
     right: 10%;
 }
 
-
+.servives-container-2 i{
+    color: #1D232C;
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
 /* Logo container */
 
 .logo-container {
@@ -390,6 +394,7 @@ body {
     display: flex;
     gap: 30px;
     font-size: 4vh;
+    color: #fff;
 }
 
 .initial-scroll-animate {

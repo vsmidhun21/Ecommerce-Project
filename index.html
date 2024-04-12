@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MultiZone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Boxicons import-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Font Awesome imports -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -39,7 +39,7 @@
             <a href="#mostwanted-container">Most Wanted</a>
             <a href="collections.html">Collections</a>
             <a href="contact.html">Contact Us</a>
-            <a href="login.html">Login/Signup</a>
+            <a href="login.html">Signin | Signup</a>
         </div>
         <i id="menubar" style="font-size: 25px;cursor: pointer;" class="fa-solid fa-bars"></i>
     </div>
@@ -55,6 +55,7 @@
                 <a href="#mostwanted-container">Most Wanted</a>
                 <a href="collections.html">Collections</a>
                 <a href="contact.html">Contact Us</a>
+                <a href="login.html">Signin | Signup</a>
             </div>
 
         </div>
@@ -80,31 +81,31 @@
         <h1 style="font-size: 1.5em;">Brands</h1>
         <di class="logo-container__images">
             <div class="logo__images">
-                <img src="./images/icons/puma.png" alt="">
+                <img src="./Images/icons/puma.png" alt="">
                 <p>Puma</p>
             </div>
             <div class="logo__images">
-                <img src="./images/icons/adidas.png" alt="">
+                <img src="./Images/icons/adidas.png" alt="">
                 <p>Adidas</p>
             </div>
             <div class="logo__images">
-                <img src="./images/icons/nike.png" alt="">
+                <img src="./Images/icons/nike.png" alt="">
                 <p>Nike</p>
             </div>
             <div class="logo__images">
-                <img src="./images/icons/simple.png" alt="">
+                <img src="./Images/icons/simple.png" alt="">
                 <p>Simple</p>
             </div>
             <div class="logo__images">
-                <img src="./images/icons/leaves.png" alt="">
+                <img src="./Images/icons/leaves.png" alt="">
                 <p>leaves</p>
             </div>
             <div class="logo__images">
-                <img src="./images/icons/behance.png" alt="">
+                <img src="./Images/icons/behance.png" alt="">
                 <p>Behance</p>
             </div>
             <div class="logo__images">
-                <img src="./images/icons/twitch.png" alt="">
+                <img src="./Images/icons/twitch.png" alt="">
                 <p>Twitch</p>
             </div>
 
@@ -122,28 +123,28 @@
 
         <div class="servives-container-2">
             <div>
-                <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-circle-check"></i>
+                <i class='bx bx-check'></i>
                 <h4>Original Products</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
                 </p>
             </div>
 
             <div>
-                <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-face-smile"></i>
+                <i class='bx bx-smile' ></i>
                 <h4>Satisfaction Guarantee</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
                 </p>
             </div>
 
             <div>
-                <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-broom"></i>
+                <i class='bx bx-shopping-bag'></i>
                 <h4>New Arrival Everyday</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
                 </p>
             </div>
 
             <div>
-                <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-truck-fast"></i>
+                <i class='bx bxs-truck'></i>
                 <h4>Fast & Free Shipping</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
                 </p>
@@ -157,22 +158,22 @@
             <h1 style="font-size: 1.5em;">New Arrivals</h1>
             <div class="newarrival-container__images">
                 <div style="position: relative;">
-                    <img style="width: 20vw; border-radius:5px;" src="K:\Coapps\Coapps Projecct\Images\images (10).jpeg" alt="">
+                    <img style="width: 20vw; border-radius:5px;" src="./Images/images (10).jpeg" alt="">
                     <div class="overlaydiv"></div>
                     <button class="shopnow_btn">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div style="position: relative;">
-                    <img style="width: 404px;height:27vw;border-radius:5px;" src="K:\Coapps\Coapps Projecct\Images\4e164e192547685.Y3JvcCwxNjE2LDEyNjQsMCww.jpg" alt="">
+                    <img style="width: 404px;height:27vw;border-radius:5px;" src="./Images/4e164e192547685.Y3JvcCwxNjE2LDEyNjQsMCww.jpg" alt="">
                     <div class="overlaydiv"></div>
                     <button class="shopnow_btn">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div style="position: relative;">
-                    <img style="width: 20vw;border-radius:5px;" src="K:\Coapps\Coapps Projecct\Images\download (5).jpeg" alt="">
+                    <img style="width: 20vw;border-radius:5px;" src="./Images/download (5).jpeg" alt="">
                     <div class="overlaydiv"></div>
                     <button class="shopnow_btn">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div style="position: relative;">
-                    <img style="width: 20vw;height: 27vw;;border-radius:5px;" src="K:\Coapps\Coapps Projecct\Images\images (18).jpeg" alt="">
+                    <img style="width: 20vw;height: 27vw;;border-radius:5px;" src="./Images/images (18).jpeg" alt="">
                     <div class="overlaydiv"></div>
                     <button class="shopnow_btn">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
@@ -185,14 +186,14 @@
             <h1 style="font-size: 1.5em;">Fashion Zone</h1>
             <div class="mostwanted-container__images">
                 <div style="position: relative;">
-                    <img style="width: 20vw; border-radius:5px;" src="K:\Coapps\Coapps Projecct\Images\lord-shiva-printed-tshirts.jpg" alt="">
+                    <img style="width: 20vw; border-radius:5px;" src="./Images/lord-shiva-printed-tshirts.jpg" alt="">
                     <p class="sale">sale</p>
                     <div class="mostwanted-container_blackheart">
                         <img class="liked" src="./images/icons/blackheart.png" alt="">
                     </div>
                 </div>
                 <div style="position: relative;">
-                    <img style="width: 18vw;height: 300px; ;border-radius:5px;" src="K:\Coapps\Coapps Projecct\Images\pexels-luizph-3029796 (1).jpg"alt="">
+                    <img style="width: 18vw;height: 300px; ;border-radius:5px;" src="./Images/pexels-luizph-3029796 (1).jpg"alt="">
                     <p class="sale">sale</p>
                     <div class="mostwanted-container_blackheart">
                         <img class="liked" src="./images/icons/blackheart.png" alt="">
@@ -269,11 +270,11 @@
         <h1>MultiZone</h1>
         <p>The place where you love</p>
         <div class="footer__icon">
-            <i class="icon fa-brands fa-instagram" style="color: #ffffff;"></i>
-            <i class="icon fa-brands fa-twitter" style="color: #ffffff;"></i>
-            <i class="icon fa-brands fa-facebook" style="color: #ffffff;"></i>
+            <i class='bx bxl-instagram-alt'></i>
+            <i class='bx bxl-facebook-circle' ></i>
+            <i class='bx bxl-youtube'></i>
         </div>
-        <p class="subtitle">@ 2024 MultiZone.com</p>
+        <p class="subtitle">Copyrights @ 2024 MultiZone.com</p>
     </div>
 
     <script src="index.js"></script>
