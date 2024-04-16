@@ -2,7 +2,7 @@
 <div class="navbar-container">
     <h1>MultiZone</h1>
     <div class="navbar__menuitems">
-        <a href="home">Home</a>
+        <a href="{% url 'home' %}">Home</a>
         <a href="home#newarrival-container">New Arrival</a>
         <a href="home#mostwanted-container">Most Wanted</a>
         <a href="collections">Collections</a>
@@ -18,7 +18,7 @@
             <i id="sidemenu__closebar" style="cursor: pointer;" class="fa-solid fa-xmark"></i>
         </div>
         <div class="sidemenu__content">
-            <a href="home">Home</a>
+            <a href="{% url 'home' %}">Home</a>
             <a href="#newarrival-container">New Arrival</a>
             <a href="#mostwanted-container">Most Wanted</a>
             <a href="collections">Collections</a>
