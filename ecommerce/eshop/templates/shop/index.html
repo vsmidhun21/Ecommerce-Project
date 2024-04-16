@@ -1,5 +1,7 @@
 {% extends 'shop/Layouts/main.html' %}
 
+{% load static %}
+
 {% block title %}
 MultiZone
 {% endblock title %} 
@@ -16,7 +18,7 @@ MultiZone
 <!-- Display Images -->
 
 <div class="image-display">
-    <img id="displayed-image" src="./images/others/slider-one.jpg" alt="Displayed Image">
+    <img id="displayed-image" src="{% static 'Images/slider/slider-one.jpg' %}" alt="Displayed Image">
     <div class="display__content">
         <h1>Level up your style with our</h1>
         <p>Summer Collections</p>
@@ -32,31 +34,31 @@ MultiZone
     <h1 style="font-size: 1.5em;">Brands</h1>
     <di class="logo-container__images">
         <div class="logo__images">
-            <img src="./Images/icons/puma.png" alt="">
+            <img src="{% static 'Images/icons/puma.png' %}" alt="">
             <p>Puma</p>
         </div>
         <div class="logo__images">
-            <img src="./Images/icons/adidas.png" alt="">
+            <img src="{% static 'Images/icons/adidas.png' %}" alt="">
             <p>Adidas</p>
         </div>
         <div class="logo__images">
-            <img src="./Images/icons/nike.png" alt="">
+            <img src="{% static 'Images/icons/nike.png' %}" alt="">
             <p>Nike</p>
         </div>
         <div class="logo__images">
-            <img src="./Images/icons/simple.png" alt="">
+            <img src="{% static 'Images/icons/simple.png' %}" alt="">
             <p>Simple</p>
         </div>
         <div class="logo__images">
-            <img src="./Images/icons/leaves.png" alt="">
+            <img src="{% static 'Images/icons/leaves.png' %}" alt="">
             <p>leaves</p>
         </div>
         <div class="logo__images">
-            <img src="./Images/icons/behance.png" alt="">
+            <img src="{% static 'Images/icons/behance.png' %}" alt="">
             <p>Behance</p>
         </div>
         <div class="logo__images">
-            <img src="./Images/icons/twitch.png" alt="">
+            <img src="{% static 'Images/icons/twitch.png' %}" alt="">
             <p>Twitch</p>
         </div>
 
@@ -199,7 +201,7 @@ MultiZone
 
 <div class="limited-offer">
     <div class="limited-offer-img">
-        <img src="./images/others/offer.jpg" alt="">
+        <img src="{% static 'Images/Offer.jpg' %}" alt="">
     </div>
     <div class="limited-offer-text">
         <h2>Limited Offer</h2>
@@ -240,7 +242,7 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const displayedImage = document.getElementById('displayed-image');
 
-const images = ['./images/others/slider-one.jpg', './images/others/slider-two.jpg', './images/others/slider-three.jpg'];
+const images = ["{% static 'Images/slider/slider-one.jpg' %}", "{% static 'Images/slider/slider-two.jpg' %}", "{% static 'Images/slider/slider-three.jpg' %}"];
 
 let currentImageIndex = 0;
 
@@ -304,6 +306,14 @@ liked[i].addEventListener("click", function () {
 </script>
 
 <style>
+
+.signup {
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 5px;
+    background-color: #1D232C;
+    color: white;
+}
 .image-display {
     position: relative;
     display: flex;
