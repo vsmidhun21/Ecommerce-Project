@@ -1,0 +1,303 @@
+{% extends 'shop/Layouts/main.html' %}
+
+{% block title %}
+Collections | MultiZone
+{% endblock title %} 
+
+{% block content %}
+
+<div class="signup">
+    <p>Sign Up and <b>Get 20% OFF</b> for your first order
+        <i id="closeicon" style="margin-left: 5%;cursor: pointer;" class="fa-solid fa-xmark"></i>
+    </p>
+</div>
+
+
+<div class="collections_container">
+
+    <div class="filter_section">
+        <h3 class="filter_section_occasion">Occasion</h3>
+        <div>
+            <input type="checkbox" name="tags" value="summer"> Summer <br>
+            <input type="checkbox" name="tags" value="party"> Party <br>
+            <input type="checkbox" name="tags" value="beach"> Beach
+        </div>
+
+        <h3 class="filter_section_colors"> Colors </h3>
+        <div>
+            <input type="checkbox" name="tags" value="red"> Red <br>
+            <input type="checkbox" name="tags" value="blue"> Blue <br>
+            <input type="checkbox" name="tags" value="white"> White <br>
+            <input type="checkbox" name="tags" value="green"> Green
+        </div>
+
+        <h3 class="filter_section_arrivals"> Arrivals </h3>
+        <div>
+            <input type="checkbox" name="tags" value="new"> New <br>
+            <input type="checkbox" name="tags" value="old"> Old
+        </div>
+    </div>
+
+    <div class="vertical_line">
+    </div>
+
+    <div class="product_section">
+        <form class="navbar_search">
+            <i id="filter_search_icon" class="fa-solid fa-magnifying-glass"></i>
+            <input id="search-input" type="text" placeholder="Search">
+            <i id="filter_close_icon"  class="fa-solid fa-xmark"></i>
+        </form>
+        <div class="products_container">
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f1.jpg" alt="">
+                <h1>Floral Summer Shirt</h1>
+                <p>₹220</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f2.jpg" alt="">
+                <h1>Summer Green</h1>
+                <p>₹650</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f3.jpg" alt="">
+                <h1>Party Floral Shirt</h1>
+                <p>₹249</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f4.jpg" alt="">
+                <h1>Floral White Shirt</h1>
+                <p>₹479</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f5.jpg" alt="">
+                <h1>Beach Shirt</h1>
+                <p>₹579</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f6.jpg" alt="">
+                <h1>Shirt Party Red</h1>
+                <p>₹438</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f7.jpg" alt="">
+                <h1>Floral Summer Pant</h1>
+                <p>₹729</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/f8.jpg" alt="">
+                <h1>Flare Tops</h1>
+                <p>₹650</p>
+            </div>
+            <div class="products">
+                <img style="width: 20vw; border-radius:5px;" src="./images/products/n1.jpg" alt="">
+                <h1>Floral Blue Shirt</h1>
+                <p>₹820</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- news Letter -->
+<div class="newsletter">
+    <h1>Join our News Letter</h1>
+    <p>Signup for our email newspaper to get exclusive discounts, updates, and more </p>
+    <input style="width: 80%;padding: 10px;" type="text" /><br>
+    <button>Subscribe <i style="font-size: 2vw;" class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<script>
+var closeicon = document.getElementById("closeicon")
+var signup = document.querySelector(".signup")
+closeicon.addEventListener('click', () => {
+    signup.style.display = "none"
+})
+var menubar = document.getElementById("menubar")
+var sidemenu = document.querySelector(".sidemenu")
+var sidemenu__closebar = document.getElementById("sidemenu__closebar")
+menubar.addEventListener('click', () => {
+    sidemenu.style.right = 0
+})
+sidemenu__closebar.addEventListener('click', () => {
+    sidemenu.style.right = "-50%"
+})
+var tags = document.getElementsByName("tags");
+var products = document.querySelectorAll(".products");
+for (let i = 0; i < tags.length; i++) {
+    tags[i].addEventListener("click", () => {
+        if (tags[i].checked) {
+            var tagString = tags[i].value.toLowerCase();
+
+            for (let j = 0; j < products.length; j++) {
+                var productName = products[j].querySelector("h1").textContent.toLowerCase();
+                if (!productName.includes(tagString)) {
+                    products[j].style.display = "none";
+                } else {
+                    products[j].style.display = "block";
+                }
+            }
+        } else {
+            for (let j = 0; j < products.length; j++) {
+                products[j].style.display = "block";
+            }
+        }
+    });
+}
+var product = document.querySelectorAll(".products")
+var search_input = document.getElementById("search-input")
+var products_container = document.querySelectorAll(".product_container")
+var closeIcon = document.getElementById("filter_close_icon");
+search_input.addEventListener('keyup', function (event) {
+    if (search_input.value.trim() !== "") {
+        closeIcon.style.display = "inline-block";
+    } else {
+        closeIcon.style.display = "none";
+    }
+    var enteredvalue = event.target.value.toLowerCase();
+    for (var i = 0; i < product.length; i++) {
+        var products = product[i].querySelector("h1").textContent.toLowerCase();
+
+        if (products.includes(enteredvalue)) {
+            product[i].style.display = "block";
+        } else {
+            product[i].style.display = "none";
+        }
+    }
+});
+closeIcon.addEventListener("click", function () {;
+    search_input.value = "";
+    closeIcon.style.display = "none";
+});
+</script>
+
+<style>
+/* newsletter */
+.newsletter {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.newsletter h1 {
+    font-size: 2.5vw;
+}
+
+.newsletter p {
+    font-size: 1.5vw;
+}
+
+.newsletter input {
+    margin-top: 10px;
+    border: none;
+    border: solid 3px #1D232C;
+}
+
+.newsletter button {
+    border: none;
+    background-color: #1D232C;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 2vw;
+    border-radius: 10px;
+}
+
+.newsletter button:hover {
+    cursor: pointer;
+}
+/* Filter Occasion */
+
+.collections_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter_section {
+    margin: 20px;
+    flex-basis: 15%;
+    /* position: relative; */
+    font-size: 2vw;
+}
+
+.product_section {
+    flex-basis: 75%;
+    /* position: relative; */
+}
+
+.vertical_line {
+    border: 2px solid #1D232C;
+    margin: 20px;
+    height: auto;
+    /* margin: 0 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px */
+}
+
+.filter_section_price,
+.filter_section_arrivals,
+.filter_section_occasion,
+.filter_section_colors {
+    margin-top: 3vw;
+    margin-bottom: 10px;
+}
+
+.product_section {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.products_container {
+    margin-top: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+.products_container img {
+    margin-top: 2vw;
+}
+
+.navbar_search input {
+    width: 100%;
+    font-size: 18px;
+    border: none;
+}
+
+.navbar_search input:focus {
+    outline: none;
+}
+
+.navbar_search {
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 90%;
+    display: flex;
+    font-size: 20px;
+}
+
+#filter_close_icon {
+    display: none;
+}
+
+.products img {
+    transition: transform 0.3s ease;
+}
+
+.products img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.filter_section input {
+    cursor: pointer;
+}
+
+.mostwanted-container_blackheart :hover {
+    cursor: pointer;
+}
+
+</style>
+{% endblock content %}

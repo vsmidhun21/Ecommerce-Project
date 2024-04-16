@@ -1,0 +1,116 @@
+{% extends 'shop/Layouts/main.html' %}
+
+{% block title %}
+Contact Us | MultiZone
+{% endblock title %} 
+
+{% block content %}
+
+<div class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<!-- news Letter -->
+<div class="newsletter">
+    <h1>Join our News Letter</h1>
+    <p>Signup for our email newspaper to get exclusive discounts, updates, and more </p>
+    <input style="width: 80%;padding: 10px;" type="text" /><br>
+    <button type="submit">Subscribe <i style="font-size: 2vw;" class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<style>
+/* Contact */
+
+.contact-form {
+    background-color: #1D232C;
+    color: #dddddd;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 60vw;
+    margin: auto;
+    padding: 5vw;
+    padding-right: 10vw;
+    margin-top: 10px;
+}
+
+.contact-form h2 {
+    margin-bottom: 1vw;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 1vw;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 2vw;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+}
+
+
+.contact-form input[type="submit"] {
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #0056b3;
+}
+
+.contact-form input[type="text"]:focus,
+#message:focus {
+outline: none;
+}
+/* newsletter */
+.newsletter {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.newsletter h1 {
+    font-size: 2.5vw;
+}
+
+.newsletter p {
+    font-size: 1.5vw;
+}
+
+.newsletter input {
+    margin-top: 10px;
+    border: none;
+    border: solid 3px #1D232C;
+}
+
+.newsletter button {
+    border: none;
+    background-color: #1D232C;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 2vw;
+    border-radius: 10px;
+}
+
+.newsletter button:hover {
+    cursor: pointer;
+}
+</style>
+{% endblock content %}
