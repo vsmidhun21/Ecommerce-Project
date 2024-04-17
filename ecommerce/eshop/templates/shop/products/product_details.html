@@ -1,6 +1,6 @@
 {% extends 'shop/layouts/main.html' %}
 {% block title %}
-ShopKart | Online Shopping
+MultiZone | Online Shopping
 {% endblock title %}
 
 {% block content %}
@@ -13,7 +13,8 @@ ShopKart | Online Shopping
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'collections' products.category.name  %}">Collections</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'collections' %}">Collections</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'collections' products.category.name  %}">Products</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{products}}</li>
                     </ol>
                 </nav>
@@ -23,9 +24,9 @@ ShopKart | Online Shopping
                 {% if products.trending %}
                 <div class="hot">Hot</div>
                 {% endif %}
-                <img src="{{products.product_image.url}}"  class="card-image-top" alt="{{products}}">
+                <img src="{{products.product_image.url}}"  class="card-image-top" alt="{{products}}" style="max-height: 500px; width: fit-content;">
             </div>
-            <div class="col-8 my-3">
+            <div class="col-8 my-3" style="padding-left: 150px;">
                 <h5 class="text-success">{{products | upper}}</h5>
                 <p>{{products.vendor}}</p>
                 <p>{{products.description}}</p>
