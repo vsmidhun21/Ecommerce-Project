@@ -18,7 +18,7 @@ def contact(request):
 def collectionsview(request,name):
     if(Category.objects.filter(name=name,status=0)):
         product=Products.objects.filter(category__name=name)
-        return render(request,"shop/products/product.html",{"products":product,"category_name":name})
+        return render(request,"shop/products/product.html",{"product":product,"category_name":name})
     else:
         messages.warning(request,"No such Category Found")
         return redirect('collections')
@@ -27,7 +27,7 @@ def product_details(request,cname,pname):
     if(Category.objects.filter(name=cname,status=0)):
         if(Products.objects.filter(name=pname,status=0)):
             product=Products.objects.filter(name=pname,status=0).first()
-            return render(request,"shop/products/product_details.html",{"product":product})
+            return render(request,"shop/products/product_details.html",{"products":product})
         else:
             messages.error(request,"No Such Produtct Found")
             return redirect('collections')
