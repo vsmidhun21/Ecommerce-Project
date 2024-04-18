@@ -1,9 +1,11 @@
 from django.shortcuts import redirect, render
 from .models import Category, Products
 from django.contrib import messages
+from eshop.form import CustomUserForm
 
 def home(request):
-    return render(request,"shop/index.html")
+  products=Products.objects.filter(trending=1)
+  return render(request,"shop/index.html",{"products":products})
 
 def login(request):
     return render(request,"shop/login.html")
@@ -34,3 +36,30 @@ def product_details(request,cname,pname):
     else:
         messages.error(request,"No Such Catagory Found")
         return redirect('collections')
+
+def login_page(request):
+    if request.user.is_authenticated:
+        return redirect("/")
+    else:
+        if request.method=='POST':
+            name=request.POST.get('username')
+            pwd=request.POST.get('password')
+            user=authenticate(request,username=name,password=pwd)
+            if user is not None:
+                login(request,user)
+                messages.success(request,"Logged in Successfully")
+                return redirect("/")
+            else:
+                messages.error(request,"Invalid User Name or Password")
+                return redirect("/login")
+        return render(request,"shop/login.html")
+
+def register(request):
+    form=CustomUserForm()
+    if request.method=='POST':
+        form=CustomUserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Registration Success You can Login Now..!")
+            return redirect('/login')
+    return render(request,"shop/register.html",{'form':form})

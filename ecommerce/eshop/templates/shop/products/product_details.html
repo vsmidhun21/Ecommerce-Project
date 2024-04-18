@@ -22,7 +22,7 @@ MultiZone | Online Shopping
             </div>
             <div class="col-4 my-3 pic-box">
                 {% if products.trending %}
-                <div class="hot">Hot</div>
+                <div class="hot">Trending</div>
                 {% endif %}
                 <img src="{{products.product_image.url}}"  class="card-image-top" alt="{{products}}" style="max-height: 500px; width: fit-content;">
             </div>
@@ -135,4 +135,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 </script>
+<style>
+.pic-box {
+    position: relative;
+}
+
+.hot {
+    background-color: orangered;
+    color: white;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+}
+</style>
 {% endblock content %}
