@@ -36,3 +36,18 @@ class Products(models.Model):
 
     def __str__(self):
         return self.name
+
+class Cart(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    product=models.ForeignKey(Products,on_delete=models.CASCADE)
+    product_qty=models.IntegerField(null=False,blank=False)
+    created_at=models.DateTimeField(auto_now_add=True)
+    
+    @property
+    def total_cost(self):
+        return self.product_qty*self.product.selling_price
+
+class Favorite(models.Model):
+	user=models.ForeignKey(User,on_delete=models.CASCADE)
+	product=models.ForeignKey(Products,on_delete=models.CASCADE)
+	created_at=models.DateTimeField(auto_now_add=True)
