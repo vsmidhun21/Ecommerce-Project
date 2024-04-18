@@ -7,4 +7,6 @@ admin.site.register(Category,CategoryAdmin)
 """
 admin.site.register(Category)
 admin.site.register(Products)
+admin.site.register(Cart)
+admin.site.register(Favorite)
 

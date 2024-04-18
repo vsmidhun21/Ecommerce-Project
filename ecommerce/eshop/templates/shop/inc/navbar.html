@@ -140,15 +140,34 @@ h1 {
 #menubar {
     display: none;
 }
-
-
-
-
 a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
-
+@media screen and (max-width:900px) {
+    #menubar {
+        display: block;
+        font-size: 20px;
+    }
+    .navbar__menuitems {
+        display: none;
+    }
+}
 </style>
+
+<script>
+var menubar = document.getElementById("menubar")
+var sidemenu = document.querySelector(".sidemenu")
+
+var sidemenu__closebar = document.getElementById("sidemenu__closebar")
+
+menubar.addEventListener('click', () => {
+    sidemenu.style.right = 0
+})
+
+sidemenu__closebar.addEventListener('click', () => {
+    sidemenu.style.right = "-50%"
+})
+</script>

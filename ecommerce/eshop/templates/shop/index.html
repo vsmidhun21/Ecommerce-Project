@@ -78,34 +78,33 @@ MultiZone
         <div>
             <i class='bx bx-check'></i>
             <h4>Original Products</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
+            <p>Discover authentic and original products curated for your needs, ensuring quality and reliability.
             </p>
         </div>
 
         <div>
             <i class='bx bx-smile' ></i>
             <h4>Satisfaction Guarantee</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
+            <p>We stand by our products and your satisfaction is our priority. If you're not happy, we're not happy.
             </p>
         </div>
 
         <div>
             <i class='bx bx-shopping-bag'></i>
             <h4>New Arrival Everyday</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
+            <p>Stay ahead with our daily updated collection, bringing you the latest trends and innovations.
             </p>
         </div>
 
         <div>
             <i class='bx bxs-truck'></i>
             <h4>Fast & Free Shipping</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, porro.
-            </p>
+            <p>Enjoy hassle-free shopping with our fast and free shipping, delivering your order to your doorstep in no time.
         </div>
     </div>
 </div>
 
-<!-- New Arrivals -->
+<!-- Latest Offer -->
 <div class="container" style="margin-top:70px;" >
     <div class="row">
         <div class="col-12">
@@ -131,6 +130,7 @@ MultiZone
     </div>
 </div>
 
+<!-- Limited Offer -->
 <div class="limited-offer">
     <div class="limited-offer-img">
         <img src="{% static 'Images/Offer.jpg' %}" alt="">
@@ -157,18 +157,7 @@ closeicon.addEventListener('click', () => {
     signup.style.display = "none"
 })
 
-var menubar = document.getElementById("menubar")
-var sidemenu = document.querySelector(".sidemenu")
 
-var sidemenu__closebar = document.getElementById("sidemenu__closebar")
-
-menubar.addEventListener('click', () => {
-    sidemenu.style.right = 0
-})
-
-sidemenu__closebar.addEventListener('click', () => {
-    sidemenu.style.right = "-50%"
-})
 
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
@@ -208,37 +197,12 @@ function changeImageAutomatically() {
 setInterval(changeImageAutomatically, 3000);
 updateDisplayedImage();
 
-window.addEventListener("scroll", function () {
-    var elements = this.document.querySelectorAll(".initial-scroll-animate")
-    elements.forEach((el) => {
-        windowHeight = window.innerHeight
-        var elbound = el.getBoundingClientRect()
-
-        if (windowHeight > elbound.top - 100) {
-            el.classList.remove("reveal-scroll-animate")
-
-        }
-    })
-})
-
-
-
-var liked = document.querySelectorAll(".liked")
-
-for(let i=0;i<liked.length; i++){
-
-liked[i].addEventListener("click", function () {
-    if (liked[i].src.includes('redheart.png')) {
-        liked[i].src = './images/icons/blackheart.png';
-    } else {
-        liked[i].src = './images/icons/redheart.png';
-    }
-});
-}
 </script>
 
 <style>
-
+*{
+    box-sizing: border-box;
+}
 .signup {
     text-align: center;
     font-size: 1.5vw;
@@ -300,11 +264,7 @@ liked[i].addEventListener("click", function () {
     right: 10%;
 }
 
-.servives-container-2 i{
-    color: #1D232C;
-    font-size: 3vw;
-    margin-bottom: 10px;
-}
+
 /* Logo container */
 
 .logo-container {
@@ -344,13 +304,18 @@ liked[i].addEventListener("click", function () {
 
 .servives-container-2 {
     margin-top: 2vw;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     font-size: 1vw;
 }
-
+.servives-container-2 i{
+    color: #1D232C;
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
 .servives-container-2 div {
     border-radius: 5px;
     color: #fff;
@@ -398,15 +363,6 @@ liked[i].addEventListener("click", function () {
 }
 
 @media screen and (max-width:900px) {
-    #menubar {
-        display: block;
-        font-size: 20px;
-    }
-
-    .navbar__menuitems {
-        display: none;
-    }
-
     .servives-container-2 {
         font-size: 1.3vw;
     }
@@ -428,100 +384,12 @@ liked[i].addEventListener("click", function () {
     }
 }
 
-/* Filter Occasion */
-
-.collections_container {
-    display: flex;
-    flex-direction: row;
+@media screen and (max-width: 675px) {
+    .servives-container-2 {
+        display: grid;
+    }
 }
 
-.filter_section {
-    margin: 20px;
-    flex-basis: 15%;
-    /* position: relative; */
-    font-size: 2vw;
-}
-
-.product_section {
-    flex-basis: 75%;
-    /* position: relative; */
-}
-
-.vertical_line {
-    border: 2px solid #1D232C;
-    margin: 20px;
-    height: auto;
-    /* margin: 0 20px;
-    position: absolute;
-    top: 0px;
-    right: 0px */
-}
-
-.filter_section_price,
-.filter_section_arrivals,
-.filter_section_occasion,
-.filter_section_colors {
-    margin-top: 3vw;
-    margin-bottom: 10px;
-}
-
-.product_section {
-    padding: 10px;
-    margin-top: 20px;
-}
-
-.products_container {
-    margin-top: 2vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 1vw;
-}
-
-.products_container img {
-    margin-top: 2vw;
-}
-
-.navbar_search input {
-    width: 100%;
-    font-size: 18px;
-    border: none;
-}
-
-.navbar_search input:focus {
-    outline: none;
-}
-
-.navbar_search {
-    padding: 10px;
-    border: solid black 1px;
-    border-radius: 10px;
-    gap: 10px;
-    width: 90%;
-    display: flex;
-    font-size: 20px;
-}
-
-#filter_close_icon {
-    display: none;
-}
-
-.products img {
-    transition: transform 0.3s ease;
-}
-
-.products img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.filter_section input {
-    cursor: pointer;
-}
-
-.mostwanted-container_blackheart :hover {
-    cursor: pointer;
-}
 /* newsletter */
 .newsletter {
     text-align: center;

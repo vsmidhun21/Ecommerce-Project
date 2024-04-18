@@ -4,6 +4,7 @@ from django.contrib import messages
 from eshop.form import CustomUserForm
 from django.contrib.auth import authenticate,login,logout
 import json
+from django.http import  JsonResponse
 
 def home(request):
     products=Products.objects.filter(trending=1)
