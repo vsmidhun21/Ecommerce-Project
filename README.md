@@ -1,7 +1,7 @@
 # Python Full Stack - COAPPS
 
 # Project Details
-- PROJECT TITLE      : Retail Ecommerce
+- PROJECT TITLE      : Retail E-commerce
 - BRAND NAME         : MultiZone
 
 # Team Members
@@ -15,7 +15,7 @@
 2. python manage.py runserver
 
 # Project Description: 
-In this internship project, We are developing a retail ecommerce platform using Python full stack technologies. The project aims to create a robust and user-friendly online shopping experience, incorporating features such as product catalog management, user authentication, shopping cart functionality, and secure payment processing. 
+In this internship project, We are developing a retail e-commerce platform using Python full stack technologies. The project aims to create a robust and user-friendly online shopping experience, incorporating features such as product catalog management, user authentication, shopping cart functionality, and secure payment processing. 
 
 # Technologies Used
 1. Python Django
@@ -24,5 +24,3 @@ In this internship project, We are developing a retail ecommerce platform using 
 4. JavaScript
 5. MySQL
 
-# Project Status
-The project is currently in progress, with a focus on implementing and testing backend functionalities.
