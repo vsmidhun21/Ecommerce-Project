@@ -25,4 +25,4 @@ In this internship project, We are developing a retail e-commerce platform using
 5. MySQL
 
 # Demonstration Video
-![Demonstartion Video](./DemoVideo.mp4)
+<video src='./DemoVideo.mp4'/>
