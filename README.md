@@ -24,3 +24,5 @@ In this internship project, We are developing a retail e-commerce platform using
 4. JavaScript
 5. MySQL
 
+# Demonstration Video
+![Demonstartion Video](./DemoVideo.mp4)
